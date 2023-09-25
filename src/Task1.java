@@ -25,8 +25,8 @@ public class Task1 {
         sequence2(array2);
         System.out.println(Arrays.toString(array2));
 
-        sequence3(array2);
-        System.out.println(Arrays.toString(array2));
+        sequence3(array3);
+        System.out.println(Arrays.toString(array3));
 
 
     }

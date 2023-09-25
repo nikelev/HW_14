@@ -9,17 +9,29 @@ public class Task5 {
 
 Вывод: Число 1, найдено, индекс 0 Число 99, индекс не найдено
         */
-        int lenght1 = 10;
-        int lenght2 = 10;
-        int[] arr1 = new int[lenght1];
-        int[] arr2 = new int[lenght2];
-        printArray(arr1);
-        printArray(arr2);
+
+        int[] arr1 = {1, -10, 70, 101};
+        int[] arr2 = {1, 99};
+        findIndexInArray1(arr1,arr2);
+
 
 
     }
-    public static void findIndexInArray1 (int[] arr1, int[]arr2, int lenght ){
-        for (int i = 0; i < lenght; i++) {
+    public static void findIndexInArray1 (int[] arr1, int[]arr2 ){
+        for (int i = 0; i < arr2.length; i++) {
+            int n = arr2[i];
+            boolean res = false;
+            for (int j = 0; j < arr1.length; j++) {
+
+                if (arr1[j]==n ){
+                    System.out.println("Arr2 number "+n+ "   index in Arr1 "+j);
+                    res = true;
+                    break;
+
+                }
+            }if (res==false ){
+                System.out.println("number is not found");
+            }
 
         }
     }
@@ -30,9 +42,5 @@ public class Task5 {
         System.out.println();
     }
 
-    public static void fillArray(int[] arr, int min, int max) {
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int) (min + Math.random() * (max + 1 - min));
-        }
-    }
+
 }
